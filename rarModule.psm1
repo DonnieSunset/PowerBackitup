@@ -95,7 +95,8 @@ function RarSingleFolder
 	#delete existing archives
 	CleanFolderOfExistingArchives $archiveDestinationFolder_in $archivePrefix_in
 	
-	&$rarExecLocation a -ep1 -m0 "-hp$password_in" -rr $volSizeParam -rv $destRarLocation $filesToAdd 
+	#&$rarExecLocation a -ep1 -m0 "-hp$password_in" -rr $volSizeParam -rv $destRarLocation $filesToAdd 
+	&$rarExecLocation a -ep1 -m0 "-hp$password_in" $destRarLocation $filesToAdd 
 }
 
 export-modulemember -function RarSingleFolder
