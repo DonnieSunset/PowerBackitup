@@ -11,6 +11,6 @@ $Ending=".rar"
 $password = ReadPassword
 
 $name="Sonstiges"
-RarSingleFolder "$Drive" "$name" "$Drive$name" "-1" "$password"
+RarSingleFolder "$Drive" "$name" "$Drive$name" "1G" "$password"
 
 Write-Output "Finished."
