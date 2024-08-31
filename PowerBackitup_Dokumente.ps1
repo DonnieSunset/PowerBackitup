@@ -6,12 +6,13 @@
 $ScriptDir="C:\Windows\System32\WindowsPowerShell\v1.0\Modules\PowerBackitup\v0.2"
 Import-Module $ScriptDir\rarModule.psm1
 
-$Drive="P:\"
+$DestDrive="P:\"
+$SourceDrive="P:\"
 $Ending=".rar"
 $password = ReadPassword
 
 
 $name="Dokumente"
-RarSingleFolder "$Drive" "$name" "$Drive$name" "-1" "$password"
+RarSingleFolder "$DestDrive" "$name" "$SourceDrive$name" "1G" "$password"
 
 Write-Output "Finished."
